@@ -7,8 +7,8 @@
         @foreach($products as $product)
         
         @php ($j=$i+1) @endphp
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{$i}}" class="active"
-                aria-current="{{$product['id']==1?'true':'false'}}" aria-label="{{"Slide".$j}}"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{$i}}" class="{{$product['id']==1?'active':''}}"
+                aria-current="true" aria-label="{{"Slide".$j}}"></button>
                 @php ($i++) @endphp
                 @endforeach
             <!-- <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
